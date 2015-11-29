@@ -10,6 +10,9 @@ body {
 	position: relative;
 	z-index: 1;
 }
+.instructions {
+  margin-left: 30%;
+}
 .ryu {
     width: 659px;
     height: 494px;

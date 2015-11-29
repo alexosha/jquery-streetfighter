@@ -22,13 +22,21 @@ $(document).ready(function(){
     .mouseup(function(){
         $('.ryu-throwing').hide();
         $('.ryu-ready').show();
-    })
-    .on('keydown keyup',function(e){
-    	if(e.which == 88) { // 88 = x //
+    });
+    $(document).keydown(function(e){
+        if(e.which == 88){ // 88 = x
     		$('.ryu-ready').hide();
+            $('.ryu-still').hide();
     		$('.ryu-cool').show();
     	}
     });
+    $(document).keyup(function(e){
+        //alert(1);
+            if(e.which == 88){ // 88 = x
+                $('.ryu-cool').hide();
+                $('.ryu-still').show();
+            }    
+        })
 });
 
 function playHadouken() {
